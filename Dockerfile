@@ -6,7 +6,7 @@ WORKDIR /app
 COPY requirements.txt .
 RUN pip install --no-cache-dir --upgrade pip \
     && pip install --no-cache-dir -r requirements.txt \
-    && python -c "import telegram, jdatetime; print('BUILD-CHECK telegram', telegram.__version__, '| jdatetime', jdatetime.__version__)"
+    && python -c "import telegram, jdatetime; print('BUILD-CHECK telegram', telegram.__version__)"
 
 # کد ربات
 COPY bot.py .
